@@ -140,3 +140,18 @@ footer {
     width: 24px;
     height: 24px;
 }
+
+.credits {
+    text-align: center;
+    color: #ccc;
+    margin: 20px 0;
+}
+
+.credits a {
+    color: #4a90e2;
+    text-decoration: none;
+}
+
+.credits a:hover {
+    text-decoration: underline;
+}
