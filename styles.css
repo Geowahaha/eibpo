@@ -58,8 +58,9 @@ nav ul li a:hover {
     background: url('https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/powerwall-hero-01-desktop') no-repeat center center/cover;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; /* Move content to the top */
     color: #fff;
+    padding-top: 100px; /* Add some padding to move content down a bit */
 }
 
 .hero .hero-content {
