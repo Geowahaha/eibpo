@@ -61,7 +61,7 @@ nav ul li a:hover {
 .hero {
     position: relative;
     height: 100vh;
-    background: url('teslalogo.png') no-repeat center center/cover; /* Use the uploaded image */
+    background: url('image.png') no-repeat center center/cover; /* Use the uploaded image */
     display: flex;
     justify-content: center;
     align-items: center; /* Center content */
@@ -77,19 +77,13 @@ nav ul li a:hover {
 }
 
 .hero h2 {
-    font-size: 30px;
+    font-size: 48px;
     margin: 0 0 20px;
 }
 
 .hero p {
-    font-size: 20px;
+    font-size: 24px;
     margin: 10px 0;
-}
-
-.btn-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
 }
 
 .btn, .btn-alt {
