@@ -3,256 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eibpo - Find the Right Grid for You</title>
+    <title>eibpo.com - X Beyond Satisfaction</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            color: #333;
-            background: #f8f8f8;
-        }
-
-        header {
-            background: #fff;
-            padding: 10px 20px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            height: 60px;
-        }
-
-        .contact-info {
-            text-align: right;
-        }
-
-        .contact-info p {
-            margin: 0;
-            font-size: 14px;
-            color: #333;
-        }
-
-        .language-selector {
-            display: flex;
-            align-items: center;
-            margin-top: 5px;
-        }
-
-        .flag-icon {
-            height: 20px;
-            margin-right: 5px;
-        }
-
-        .main-nav {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            background: #4a90e2;
-            padding: 10px;
-        }
-
-        .main-nav a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-
-        .main-nav a:hover {
-            color: #f0c14b;
-        }
-
-        .hero {
-            background-image: url('https://cdn.prod.website-files.com/638f52a172902fd4de4425d0/6393551c203c6755621a5a05_Driveway%20Main.webp');
-            background-size: cover;
-            background-position: center;
-            height: 500px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: #fff;
-            font-size: 3em;
-            animation: fadeIn 3s ease-in;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
-        .product-section {
-            padding: 50px;
-            max-width: 1200px;
-            margin: auto;
-            text-align: center;
-            animation: slideInUp 2s ease-out;
-        }
-
-        @keyframes slideInUp {
-            from {
-                transform: translateY(100px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        .product {
-            background: #fff;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            transition: transform 0.3s;
-        }
-
-        .product:hover {
-            transform: scale(1.05);
-        }
-
-        .product img {
-            width: 100%;
-            border-radius: 8px;
-            animation: zoomIn 1.5s ease-in-out;
-        }
-
-        @keyframes zoomIn {
-            from {
-                transform: scale(0.8);
-                opacity: 0;
-            }
-            to {
-                transform: scale(1);
-                opacity: 1;
-            }
-        }
-
-        .button {
-            display: inline-block;
-            padding: 15px 30px;
-            margin-top: 20px;
-            background-color: #4a90e2;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s, transform 0.3s;
-        }
-
-        .button:hover {
-            background-color: #357ABD;
-            transform: scale(1.1);
-        }
-
-        footer {
-            background: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-            animation: fadeIn 3s ease-in;
-        }
-
-        .footer-links {
-            margin-bottom: 15px;
-        }
-
-        .footer-links a {
-            color: #4a90e2;
-            margin: 0 10px;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .footer-links a:hover {
-            color: #fff;
-        }
-    </style>
+    <script defer src="scripts.js"></script>
 </head>
 <body>
     <header>
-    <div class="header-container">
-        <img src="eibpologo.png" alt="Eibpo.com Logo" class="logo">
-        <div class="contact-info">
-            <p>    <strong>www.eibpo.com</strong></p>
-            <div class="language-selector">
-            </div>
+        <div class="logo">
+            <img src="eibpo.com logowhite.jpg" alt="eibpo.com Logo">
+            <h1>eibpo</h1>
         </div>
-    </div>
-    <nav class="main-nav">
-        <a href="#core-foundations">Core Foundations</a>
-        <a href="#core-drainage">Core Drainage</a>
-        <a href="#core-glow">Core Glow</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#sale">Sale!</a>
-        <a href="#about">About</a>
-    </nav>
-</header>
-    
-    <nav>
-        <a href="#products">                            X Beyond Satisfaction</a>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </nav>
-
-    <section class="hero">
-        Find the Right Grass Grid for You
-    </section>
-
-    <section id="products" class="product-section">
-        <h2>Our Grass Grid Solutions</h2>
-        <div class="product-grid">
-            <div class="product">
-                <a href="https://shop.coregravel.ca/collections/core-foundations"><img src="https://shop.coregravel.ca/cdn/shop/files/kim_kardashian_property_brothers.jpg?v=1708558935&width=2400" alt="CORE Foundations"></a>
-                <h3>Grid Type A</h3>
-                <p>Perfect for residential driveways, walkways, and light vehicle use. Provides a stable and eco-friendly surface.</p>
-                <a href="https://shop.coregravel.ca/" class="button">Learn More & Order Now</a>
+    </header>
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h2>Whole-Home Backup, 24/7</h2>
+                <p>Power Your Home, Save Money</p>
+                <a href="#order" class="btn">Order Now</a>
             </div>
-            <div class="product">
-                <a href="https://shop.coregravel.ca/"><img src="https://shop.coregravel.ca/cdn/shop/files/Grid_Type_B.jpg?v=1674004815" alt="Grass Grid Type B"></a>
-                <h3>Grid Type B</h3>
-                <p>Ideal for commercial parking areas and heavy-duty use. Offers excellent load distribution and water drainage.</p>
-                <a href="https://shop.coregravel.ca/" class="button">Learn More & Order Now</a>
+        </section>
+        <section id="power-your-home" class="info-section">
+            <div class="info-content">
+                <h2>Power Your Home, Save Money</h2>
+                <p>Powerwall is a compact home battery that stores energy generated by solar or from the grid. You can use this energy to power the devices and appliances in your home day and night, during outages or when you want to go off-grid. With customizable power modes, you can optimize your stored energy for outage protection, electricity bill savings, and more.</p>
             </div>
-            <div class="product">
-                <a href="https://shop.coregravel.ca/"><img src="https://shop.coregravel.ca/cdn/shop/files/Grid_Type_C.jpg?v=1674004815" alt="Grass Grid Type C"></a>
-                <h3>Grid Type C</h3>
-                <p>Best suited for public spaces and environmentally conscious projects. Ensures stability while allowing vegetation growth.</p>
-                <a href="https://shop.coregravel.ca/" class="button">Learn More & Order Now</a>
+        </section>
+        <section id="features" class="features-section">
+            <div class="feature" onclick="showVideo('video1')">
+                <h3>Store Extra Energy</h3>
+                <p>When your solar system generates more energy than you need, you can store the extra energy with Powerwall and save it for later. Powerwall can also recharge from the grid when utility prices are low.</p>
             </div>
-        </div>
-    </section>
-
+            <div class="feature" onclick="showVideo('video2')">
+                <h3>Use Energy</h3>
+                <p>Your stored energy is available whenever you need it—during the day, at night, or when an outage occurs. A Powerwall system can power your entire home, including your heater or A/C, as well as other large appliances.</p>
+            </div>
+            <div class="feature" onclick="showVideo('video3')">
+                <h3>Save and Earn</h3>
+                <p>Using your usage history, weather forecasts, and utility price estimates, Powerwall optimizes your stored energy to power your home more efficiently, day and night. With some utilities, you can earn money by selling your energy to the grid.</p>
+            </div>
+        </section>
+        <section id="video-display" class="video-section">
+            <h2>Video</h2>
+            <div class="video-embed" id="video1" style="display: none;">
+                <video width="100%" height="auto" controls>
+                    <source src="https://digitalassets.tesla.com/tesla-contents/video/upload/f_auto,q_auto:best/powerwall-store-use-save-carousel-01.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="video-embed" id="video2" style="display: none;">
+                <video width="100%" height="auto" controls>
+                    <source src="https://digitalassets.tesla.com/tesla-contents/video/upload/f_auto,q_auto:best/powerwall-store-use-save-carousel-02.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="video-embed" id="video3" style="display: none;">
+                <video width="100%" height="auto" controls>
+                    <source src="https://digitalassets.tesla.com/tesla-contents/video/upload/f_auto,q_auto:best/powerwall-store-use-save-carousel-03.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+        <section id="images" class="image-section">
+            <h2>Powerwall in Action</h2>
+            <div class="tesla-images">
+                <img src="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/powerwall_-chart" alt="Powerwall Chart">
+                <img src="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/powerwall-hero-desktop-na.jpg" alt="Powerwall Hero">
+            </div>
+        </section>
+    </main>
     <footer>
-        <div class="footer-links">
-            <a href="#products">X Beyond Satisfaction</a> |
-            <a href="https://shop.coregravel.ca/">Shop</a>
+        <p>&copy; 2024 eibpo.com - X Beyond Satisfaction</p>
+        <div class="social-media">
+            <a href="#"><img src="icon-facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="icon-twitter.png" alt="Twitter"></a>
+            <a href="#"><img src="icon-linkedin.png" alt="LinkedIn"></a>
         </div>
-        <p>&copy; 2024 Eibpo.com - Sustainable Outdoor Solutions</p>
     </footer>
-
-    <script>
-        // JavaScript for scroll effect during navigation
-        window.addEventListener('scroll', function() {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 50) {
-                nav.style.backgroundColor = '#444';
-            } else {
-                nav.style.backgroundColor = '#333';
-            }
-        });
-    </script>
 </body>
 </html>
