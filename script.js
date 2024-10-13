@@ -1,23 +1,26 @@
-function switchVideo(videoId) {
-    const videoSrcMap = {
-        'video1': 'https://digitalassets.tesla.com/tesla-contents/video/upload/f_auto,q_auto:best/powerwall-store-use-save-carousel-01.mp4',
-        'video2': 'https://digitalassets.tesla.com/tesla-contents/video/upload/f_auto,q_auto:best/powerwall-store-use-save-carousel-02.mp4',
-        'video3': 'https://digitalassets.tesla.com/tesla-contents/video/upload/f_auto,q_auto:best/powerwall-store-use-save-carousel-03.mp4'
-    };
-
+// Function to switch the main video source
+function switchVideo(videoSrc) { 
     const mainVideo = document.getElementById('main-video');
-    mainVideo.src = videoSrcMap[videoId];
+    mainVideo.src = videoSrc;
     mainVideo.play();
 }
 
-document.addEventListener('scroll', function() {
-    const videoSections = document.querySelectorAll('.video-feature video');
-    videoSections.forEach(video => {
-        const rect = video.getBoundingClientRect();
-        if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
-            video.play();
-        } else {
-            video.pause();
-        }
+// Function to toggle the navigation menu on mobile
+function toggleMenu() {
+    const navMenu = document.getElementById('nav-menu');
+    navMenu.classList.toggle('active');
+}
+
+// Execute when the DOM is fully loaded
+document.addEventListener('DOMContentLoaded', () => {
+    // Update the footer year dynamically
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Add click event listeners to video features
+    document.querySelectorAll('.video-feature').forEach(feature => {
+        feature.addEventListener('click', () => {
+            const videoSrc = feature.getAttribute('data-video');
+            switchVideo(videoSrc);
+        });
     });
 });
