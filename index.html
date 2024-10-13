@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eibpo - Grass Grid Solutions</title>
+    <title>Eibpo - Find the Right Grid for You</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
@@ -42,37 +42,38 @@
         }
 
         .hero {
-            background-image: url('image.png'); /* Updated with your provided image */
+            background-image: url('image.png');
             background-size: cover;
             background-position: center;
-            height: 500px;
+            height: 400px;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             color: #fff;
-            font-size: 3em;
+            font-size: 2.5em;
+            padding: 20px;
         }
 
-        .product-section {
+        .grid-options-section {
             padding: 50px;
             max-width: 1200px;
             margin: auto;
             text-align: center;
         }
 
-        .product-section h2 {
+        .grid-options-section h2 {
             font-size: 2em;
             margin-bottom: 20px;
         }
 
-        .product-grid {
+        .grid-options {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
         }
 
-        .product {
+        .grid-option {
             background: #fff;
             padding: 20px;
             border: 1px solid #ddd;
@@ -80,11 +81,11 @@
             transition: transform 0.3s;
         }
 
-        .product:hover {
+        .grid-option:hover {
             transform: scale(1.05);
         }
 
-        .product img {
+        .grid-option img {
             width: 100%;
             border-radius: 8px;
         }
@@ -111,23 +112,35 @@
     </header>
     
     <nav>
-        <a href="#products">Products</a>
+        <a href="#grid-options">Grid Options</a>
         <a href="#about">About Us</a>
         <a href="#contact">Contact</a>
     </nav>
 
     <section class="hero">
-        Grass Grid - Sustainable Outdoor Solutions
+        Find the Right Grass Grid for Your Needs
     </section>
 
-    <section id="products" class="product-section">
-        <h2>Our Products</h2>
-        <div class="product-grid">
-            <div class="product">
-                <img src="https://via.placeholder.com/300x200" alt="Grass Grid Product">
-                <h3>Grass Grid System</h3>
-                <p>Our Grass Grid system is perfect for maintaining a stable, green surface. Ideal for driveways, parking areas, and gardens.</p>
-                <a href="https://shop.coregravel.ca/" class="button">Learn More & Order Now</a>
+    <section id="grid-options" class="grid-options-section">
+        <h2>Choose the Best Grid for Your Project</h2>
+        <div class="grid-options">
+            <div class="grid-option">
+                <img src="https://via.placeholder.com/300x200" alt="Driveway Grass Grid">
+                <h3>Driveway Grass Grid</h3>
+                <p>Perfect for stabilizing driveway surfaces while allowing natural grass growth. Maintain aesthetics and functionality.</p>
+                <a href="https://shop.coregravel.ca/" class="button">Learn More</a>
+            </div>
+            <div class="grid-option">
+                <img src="https://via.placeholder.com/300x200" alt="Parking Area Grid">
+                <h3>Parking Area Grid</h3>
+                <p>Enhance your parking areas with stable, durable grids that support green space. Eco-friendly and easy to install.</p>
+                <a href="https://shop.coregravel.ca/" class="button">Learn More</a>
+            </div>
+            <div class="grid-option">
+                <img src="https://via.placeholder.com/300x200" alt="Garden Path Grid">
+                <h3>Garden Path Grid</h3>
+                <p>Create beautiful garden paths that blend into the landscape, with stability and minimal maintenance required.</p>
+                <a href="https://shop.coregravel.ca/" class="button">Learn More</a>
             </div>
         </div>
     </section>
