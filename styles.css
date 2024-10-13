@@ -15,19 +15,9 @@ header {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-header .logo {
-    display: flex;
-    align-items: center;
-}
-
-header .logo img {
-    height: 50px;
-}
-
 header .logo h1 {
-    font-size: 36px;
-    margin: 0 0 0 10px;
-    color: #4a90e2;
+    font-size: 24px;
+    color: #fff;
 }
 
 nav ul {
@@ -100,10 +90,25 @@ nav ul li a:hover {
     border-radius: 10px;
     margin: 20px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.video-container {
+    width: 80%;
+    margin-bottom: 40px;
+}
+
+.text-container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
 }
 
 .video-feature {
-    margin: 20px 0;
+    cursor: pointer;
+    width: 30%;
 }
 
 footer {
