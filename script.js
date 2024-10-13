@@ -12,7 +12,7 @@ function toggleMenu() {
 }
 
 // Execute when the DOM is fully loaded
-document.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('load', () => {
     // Update the footer year dynamically
     document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.video-feature').forEach(feature => {
         feature.addEventListener('click', () => {
             const videoSrc = feature.getAttribute('data-video');
+            console.log('Video feature clicked:', videoSrc); // Debugging line
             switchVideo(videoSrc);
         });
     });
