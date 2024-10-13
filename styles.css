@@ -70,13 +70,13 @@ nav ul li a:hover {
 .hero {
     position: relative;
     height: 100vh;
-    background: url('hero-background.jpg') no-repeat center center/cover;
+    background: url('your-royalty-free-image.jpg') no-repeat center center/cover;
+    /* Ensure you have this image in your project directory */
     display: flex;
     justify-content: center;
     align-items: center;
     color: #fff;
 }
-
 .hero .hero-content {
     text-align: center;
     background: rgba(0, 0, 0, 0.5);
