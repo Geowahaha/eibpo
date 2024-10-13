@@ -121,13 +121,13 @@ nav ul li a:hover {
 
 .video-features {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    flex-wrap: nowrap; /* Prevent wrapping on PC */
+    justify-content: space-between;
 }
 
 .video-feature {
     cursor: pointer;
-    width: 30%;
+    width: 32%; /* Adjusted to fit three items horizontally */
     margin-bottom: 20px;
     text-align: left;
 }
