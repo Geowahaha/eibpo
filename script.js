@@ -1,7 +1,9 @@
 // Function to switch the main video source
 function switchVideo(videoSrc) { 
     const mainVideo = document.getElementById('main-video');
-    mainVideo.src = videoSrc;
+    const source = mainVideo.querySelector('source');
+    source.src = videoSrc;
+    mainVideo.load();
     mainVideo.play();
 }
 
