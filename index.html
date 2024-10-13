@@ -1,4 +1,4 @@
-           <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -14,10 +14,60 @@
         }
 
         header {
-            background: #4a90e2;
-            padding: 15px;
-            text-align: center;
-        }
+    background: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 60px;
+}
+
+.contact-info {
+    text-align: right;
+}
+
+.contact-info p {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.language-selector {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.flag-icon {
+    height: 20px;
+    margin-right: 5px;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background: #4a90e2;
+    padding: 10px;
+}
+
+.main-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.main-nav a:hover {
+    color: #f0c14b;
+}
 
         header img {
             height: 50px;
@@ -42,7 +92,7 @@
         }
 
         .hero {
-            background-image: url('https://cdn.prod.website-files.com/638f52a172902fd4de4425d0/6393551c203c6755621a5a05_Driveway%20Main.webp');
+            background-image: url('https://shop.coregravel.ca/cdn/shop/files/Grid_Type_A.jpg?v=1674004815');
             background-size: cover;
             background-position: center;
             height: 500px;
@@ -132,8 +182,28 @@
 </head>
 <body>
     <header>
-        <img src="eibpologo.png" alt="Eibpo.com Logo">
-    </header>
+    <div class="header-container">
+        <img src="eibpologo.png" alt="Eibpo.com Logo" class="logo">
+        <div class="contact-info">
+            <p>Request a Quote: <strong>1.855.777.2673</strong></p>
+            <div class="language-selector">
+                <img src="flag-th.png" alt="THB" class="flag-icon">
+                <span>THB ฿</span>
+            </div>
+        </div>
+    </div>
+    <nav class="main-nav">
+        <a href="#whats-new">What's New!</a>
+        <a href="#core-foundations">Core Foundations</a>
+        <a href="#core-drainage">Core Drainage</a>
+        <a href="#core-glow">Core Glow</a>
+        <a href="#privacy-screens">Privacy Screens</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#bundles">Bundles</a>
+        <a href="#sale">Sale!</a>
+        <a href="#about">About</a>
+    </nav>
+</header>
     
     <nav>
         <a href="#products">Products</a>
@@ -149,7 +219,7 @@
         <h2>Our Grass Grid Solutions</h2>
         <div class="product-grid">
             <div class="product">
-                <a href="https://shop.coregravel.ca/"><img src="https://shop.coregravel.ca/cdn/shop/products/Gravel_50-35_Installation_2__28317.jpg?v=1723074349&width=1400" alt="Grass Grid Type A"></a>
+                <a href="https://shop.coregravel.ca/"><img src="https://shop.coregravel.ca/cdn/shop/files/Grid_Type_A.jpg?v=1674004815" alt="Grass Grid Type A"></a>
                 <h3>Grid Type A</h3>
                 <p>Perfect for residential driveways, walkways, and light vehicle use. Provides a stable and eco-friendly surface.</p>
                 <a href="https://shop.coregravel.ca/" class="button">Learn More & Order Now</a>
