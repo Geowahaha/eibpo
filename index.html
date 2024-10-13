@@ -42,38 +42,37 @@
         }
 
         .hero {
-            background-image: url('image.png');
+            background-image: url('https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/powerwall-hero-01-desktop');
             background-size: cover;
             background-position: center;
-            height: 400px;
+            height: 500px;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             color: #fff;
-            font-size: 2.5em;
-            padding: 20px;
+            font-size: 3em;
         }
 
-        .grid-options-section {
+        .product-section {
             padding: 50px;
             max-width: 1200px;
             margin: auto;
             text-align: center;
         }
 
-        .grid-options-section h2 {
+        .product-section h2 {
             font-size: 2em;
             margin-bottom: 20px;
         }
 
-        .grid-options {
+        .product-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
         }
 
-        .grid-option {
+        .product {
             background: #fff;
             padding: 20px;
             border: 1px solid #ddd;
@@ -81,11 +80,11 @@
             transition: transform 0.3s;
         }
 
-        .grid-option:hover {
+        .product:hover {
             transform: scale(1.05);
         }
 
-        .grid-option img {
+        .product img {
             width: 100%;
             border-radius: 8px;
         }
@@ -104,42 +103,6 @@
         .button:hover {
             background-color: #357ABD;
         }
-
-        .variations {
-            margin-top: 20px;
-            text-align: left;
-        }
-
-        .variations h4 {
-            margin-bottom: 10px;
-            font-size: 1.2em;
-        }
-
-        .variations ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .variations ul li {
-            background: #f0f0f0;
-            padding: 10px;
-            margin-bottom: 5px;
-            border-radius: 5px;
-        }
-
-        .payment-options {
-            margin-top: 20px;
-            text-align: center;
-            padding: 20px;
-            background: #fff;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-        }
-
-        .payment-options img {
-            height: 40px;
-            margin: 10px;
-        }
     </style>
 </head>
 <body>
@@ -148,48 +111,42 @@
     </header>
     
     <nav>
-        <a href="#grid-options">Grid Options</a>
+        <a href="#products">Products</a>
         <a href="#about">About Us</a>
         <a href="#contact">Contact</a>
     </nav>
 
     <section class="hero">
-        Find the Right Grass Grid for Your Needs
+        Find the Right Grass Grid for You
     </section>
 
-    <section id="grid-options" class="grid-options-section">
-        <h2>Choose the Best Grid for Your Project</h2>
-        <div class="grid-options">
-            
-                <a href="#checkout" class="button checkout-button">Proceed to Checkout</a>
+    <section id="products" class="product-section">
+        <h2>Our Grass Grid Solutions</h2>
+        <div class="product-grid">
+            <div class="product">
+                <img src="https://shop.coregravel.ca/cdn/shop/files/Grid_Type_A.jpg?v=1674004815" alt="Grass Grid Type A">
+                <h3>Grid Type A</h3>
+                <p>Perfect for residential driveways, walkways, and light vehicle use. Provides a stable and eco-friendly surface.</p>
+                <a href="https://shop.coregravel.ca/" class="button">Learn More & Order Now</a>
             </div>
-            
-                <a href="#checkout" class="button checkout-button">Proceed to Checkout</a>
+            <div class="product">
+                <img src="https://shop.coregravel.ca/cdn/shop/files/Grid_Type_B.jpg?v=1674004815" alt="Grass Grid Type B">
+                <h3>Grid Type B</h3>
+                <p>Ideal for commercial parking areas and heavy-duty use. Offers excellent load distribution and water drainage.</p>
+                <a href="https://shop.coregravel.ca/" class="button">Learn More & Order Now</a>
             </div>
-            
-                <a href="#checkout" class="button checkout-button">Proceed to Checkout</a>
+            <div class="product">
+                <img src="https://shop.coregravel.ca/cdn/shop/files/Grid_Type_C.jpg?v=1674004815" alt="Grass Grid Type C">
+                <h3>Grid Type C</h3>
+                <p>Best suited for public spaces and environmentally conscious projects. Ensures stability while allowing vegetation growth.</p>
+                <a href="https://shop.coregravel.ca/" class="button">Learn More & Order Now</a>
             </div>
         </div>
     </section>
 
-    <section class="payment-options">
-        <h2>Payment Options</h2>
-        <p>We accept the following payment methods:</p>
-        <img src="https://via.placeholder.com/100x40" alt="Visa">
-        <img src="https://via.placeholder.com/100x40" alt="MasterCard">
-        <img src="https://via.placeholder.com/100x40" alt="PayPal">
-        <img src="https://via.placeholder.com/100x40" alt="American Express">
-    </section>
-
     <footer>
         <p>&copy; 2024 Eibpo.com - Sustainable Outdoor Solutions</p>
-        <section id="checkout" class="checkout-section">
-        <h2>Checkout</h2>
-        <p>Ready to complete your purchase? Click the button below to proceed to checkout.</p>
-        <a href="https://shop.coregravel.ca/checkout" class="button">Checkout Now</a>
-    </section>
-
-</footer>
+    </footer>
 
     <script>
         // JavaScript for scroll effect during navigation
