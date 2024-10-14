@@ -1,10 +1,15 @@
-// Function to switch the main video source
-function switchVideo(videoSrc) { 
+// Function to switch the main video source (YouTube embeds)
+function switchVideo(videoSrc, clickedElement) { 
     const mainVideo = document.getElementById('main-video');
-    const source = mainVideo.querySelector('source');
-    source.src = videoSrc;
-    mainVideo.load();
-    mainVideo.play();
+    mainVideo.src = videoSrc;
+
+    // Remove active class from all features
+    document.querySelectorAll('.video-feature').forEach(feature => {
+        feature.classList.remove('active');
+    });
+
+    // Add active class to the clicked feature
+    clickedElement.classList.add('active');
 }
 
 // Function to toggle the navigation menu on mobile
@@ -22,8 +27,7 @@ window.addEventListener('load', () => {
     document.querySelectorAll('.video-feature').forEach(feature => {
         feature.addEventListener('click', () => {
             const videoSrc = feature.getAttribute('data-video');
-            console.log('Video feature clicked:', videoSrc); // Debugging line
-            switchVideo(videoSrc);
+            switchVideo(videoSrc, feature);
         });
     });
 });
