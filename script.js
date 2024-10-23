@@ -79,10 +79,19 @@ uploadForm.addEventListener('submit', (e) => {
     const storageRef = storage.ref(`uploads/${Date.now()}_${file.name}`);
     const uploadTask = storageRef.put(file);
 
+    // Create Progress Bar Element
+    const progressBar = document.createElement('div');
+    progressBar.classList.add('progress-bar');
+    progressBar.innerHTML = '<div class="progress-bar-fill"></div>';
+    uploadStatus.appendChild(progressBar);
+
+    const progressFill = progressBar.querySelector('.progress-bar-fill');
+
     uploadTask.on('state_changed',
         (snapshot) => {
-            // Optional: Implement a progress bar here
+            // Update Progress Bar
             const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+            progressFill.style.width = `${progress}%`;
             uploadStatus.textContent = `Upload is ${progress.toFixed(2)}% done`;
             uploadStatus.style.color = 'blue';
         },
@@ -104,6 +113,7 @@ uploadForm.addEventListener('submit', (e) => {
                     uploadStatus.textContent = 'Upload successful!';
                     uploadStatus.style.color = 'green';
                     uploadForm.reset();
+                    progressFill.style.width = '0%';
                 })
                 .catch((error) => {
                     uploadStatus.textContent = `Error saving to database: ${error.message}`;
@@ -132,7 +142,7 @@ db.collection('uploads').orderBy('timestamp', 'desc').onSnapshot((snapshot) => {
         } else if (['mp4', 'webm', 'ogg'].includes(fileType.toLowerCase())) {
             mediaElement = `<video controls src="${data.url}"></video>`;
         } else {
-            mediaElement = `<a href="${data.url}" target="_blank">View File</a>`;
+            mediaElement = `<a href="${data.url}" target="_blank" rel="noopener noreferrer">View File</a>`;
         }
 
         const textElement = `<p>${data.text}</p>`;
@@ -141,13 +151,35 @@ db.collection('uploads').orderBy('timestamp', 'desc').onSnapshot((snapshot) => {
     });
 });
 
-// Optional: Implement Logout Functionality
+// Implement Logout Functionality
 function logoutAdmin() {
     auth.signOut().then(() => {
-        sessionStorage.removeItem('isAdmin');
         adminPanel.style.display = 'none';
-        // Optionally, redirect to home or another page
+        // Optionally, display a logout confirmation
     }).catch((error) => {
         console.error('Error signing out:', error);
     });
 }
+
+// Accessibility: Allow Enter key to toggle menu
+document.querySelector('.menu-icon').addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggleMenu();
+    }
+});
+
+// Accessibility: Allow Enter key to activate video features
+const videoFeatures = document.querySelectorAll('.video-feature');
+videoFeatures.forEach(feature => {
+    feature.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            const videoSrc = this.getAttribute('data-video');
+            document.getElementById('main-video').src = videoSrc;
+            // Update active class
+            videoFeatures.forEach(f => f.classList.remove('active'));
+            this.classList.add('active');
+        }
+    });
+});
