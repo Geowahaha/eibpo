@@ -32,7 +32,7 @@
         </div>
         <nav>
             <!-- Hamburger Menu Icon for Mobile -->
-            <div class="menu-icon" onclick="toggleMenu()">
+            <div class="menu-icon" onclick="toggleMenu()" aria-label="Toggle Navigation Menu" role="button" tabindex="0">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -63,18 +63,18 @@
         <section id="video-section" class="video-section">
             <!-- Video Container with YouTube Embed -->
             <div class="video-container">
-                <iframe id="main-video" width="100%" height="500" src="https://www.youtube.com/embed/yKORsrlN-2k" frameborder="0" allowfullscreen title="Tesla Powerwall Introduction"></iframe>
+                <iframe id="main-video" width="100%" height="500" src="https://www.youtube.com/embed/yKORsrlN-2k" frameborder="0" allowfullscreen title="Tesla Powerwall Introduction" loading="lazy"></iframe>
             </div>
             <div class="video-features">
-                <div class="video-feature active" data-video="https://www.youtube.com/embed/yKORsrlN-2k">
+                <div class="video-feature active" data-video="https://www.youtube.com/embed/yKORsrlN-2k" tabindex="0" role="button" aria-pressed="true">
                     <h3>Powerwall Introduction</h3>
                     <p>Learn about the Tesla Powerwall, a home battery system that stores energy, detects outages, and automatically becomes your home's energy source when the grid goes down.</p>
                 </div>
-                <div class="video-feature" data-video="https://www.youtube.com/embed/xXyP4axhZoc">
+                <div class="video-feature" data-video="https://www.youtube.com/embed/xXyP4axhZoc" tabindex="0" role="button" aria-pressed="false">
                     <h3>Tesla Energy Overview</h3>
                     <p>Explore how Tesla Energy accelerates the world's transition to sustainable energy with its suite of products.</p>
                 </div>
-                <div class="video-feature" data-video="https://www.youtube.com/embed/4sfwDyiPTdU">
+                <div class="video-feature" data-video="https://www.youtube.com/embed/4sfwDyiPTdU" tabindex="0" role="button" aria-pressed="false">
                     <h3>Powerwall in Action</h3>
                     <p>See how the Tesla Powerwall provides reliable backup power to homes during outages.</p>
                 </div>
@@ -83,29 +83,47 @@
 
         <!-- 3D Model Showcase Section -->
         <section id="3d-model-section" class="model-section">
-            <h2>Explore Our Solar Carport</h2>
+            <h2>Explore Our 3D Models</h2>
+
+            <!-- First Sketchfab Model -->
             <div class="sketchfab-embed-wrapper">
-                <iframe title="Solar carport 24u04" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/094e6dfdd36a48d58a3b7d0d258d58d5/embed"></iframe>
+                <iframe title="Solar carport 24u04" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" src="https://sketchfab.com/models/094e6dfdd36a48d58a3b7d0d258d58d5/embed" loading="lazy"></iframe>
                 <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
                     <a href="https://sketchfab.com/3d-models/solar-carport-24u04-094e6dfdd36a48d58a3b7d0d258d58d5?utm_medium=embed&utm_campaign=share-popup&utm_content=094e6dfdd36a48d58a3b7d0d258d58d5" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Solar carport 24u04</a> by <a href="https://sketchfab.com/jindaarch?utm_medium=embed&utm_campaign=share-popup&utm_content=094e6dfdd36a48d58a3b7d0d258d58d5" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Jinda</a> on <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=094e6dfdd36a48d58a3b7d0d258d58d5" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
+                </p>
+            </div>
+
+            <!-- Second Sketchfab Model -->
+            <div class="sketchfab-embed-wrapper">
+                <iframe title="Solar Car Port Exploded Model" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" src="https://sketchfab.com/models/5dc84f64d0724895a142ba7f782dd3db/embed" loading="lazy"></iframe>
+                <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
+                    <a href="https://sketchfab.com/3d-models/solar-car-port-exploded-model-5dc84f64d0724895a142ba7f782dd3db?utm_medium=embed&utm_campaign=share-popup&utm_content=5dc84f64d0724895a142ba7f782dd3db" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Solar Car Port Exploded Model</a> by <a href="https://sketchfab.com/cadvanced?utm_medium=embed&utm_campaign=share-popup&utm_content=5dc84f64d0724895a142ba7f782dd3db" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">CADvanced Design</a> on <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=5dc84f64d0724895a142ba7f782dd3db" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
+                </p>
+            </div>
+
+            <!-- Third Sketchfab Model -->
+            <div class="sketchfab-embed-wrapper">
+                <iframe title="3 Panel Bay Solar Carport Reversed" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" src="https://sketchfab.com/models/c9eb4809bce9435aae2bfe8ea46425ce/embed" loading="lazy"></iframe>
+                <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
+                    <a href="https://sketchfab.com/3d-models/3-panel-bay-solar-carport-reversed-c9eb4809bce9435aae2bfe8ea46425ce?utm_medium=embed&utm_campaign=share-popup&utm_content=c9eb4809bce9435aae2bfe8ea46425ce" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">3 Panel Bay Solar Carport Reversed</a> by <a href="https://sketchfab.com/cadvanced?utm_medium=embed&utm_campaign=share-popup&utm_content=c9eb4809bce9435aae2bfe8ea46425ce" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">CADvanced Design</a> on <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=c9eb4809bce9435aae2bfe8ea46425ce" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
                 </p>
             </div>
         </section>
 
         <!-- Admin Panel (Hidden by default) -->
         <section id="admin-panel" class="admin-panel" style="display: none;">
-            <button class="logout-button" onclick="logoutAdmin()">Logout</button>
+            <button class="logout-button" onclick="logoutAdmin()" aria-label="Logout Admin">Logout</button>
             <h2>Admin Panel</h2>
             <form id="upload-form">
                 <label for="media">Select Image/Video:</label>
-                <input type="file" id="media" accept="image/*,video/*" required />
+                <input type="file" id="media" accept="image/*,video/*" required aria-required="true" />
 
                 <label for="text-content">Text Content:</label>
-                <textarea id="text-content" placeholder="Enter text here" required></textarea>
+                <textarea id="text-content" placeholder="Enter text here" required aria-required="true"></textarea>
 
                 <button type="submit">Upload</button>
             </form>
-            <div id="upload-status"></div>
+            <div id="upload-status" aria-live="polite"></div>
         </section>
 
         <!-- Display Uploaded Content -->
@@ -123,24 +141,28 @@
         <p>This website is not affiliated with or endorsed by Tesla, Inc. All trademarks are property of their respective owners.</p>
         <div class="social-media">
             <!-- Social Media Links -->
+            <a href="https://facebook.com/yourpage" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><img src="facebook-icon.png" alt="Facebook" /></a>
+            <a href="https://twitter.com/yourprofile" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><img src="twitter-icon.png" alt="Twitter" /></a>
+            <a href="https://instagram.com/yourprofile" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><img src="instagram-icon.png" alt="Instagram" /></a>
+            <!-- Add more social media links as needed -->
         </div>
     </footer>
 
     <!-- Authentication Modal -->
-    <div id="auth-modal" class="auth-modal" style="display: none;">
+    <div id="auth-modal" class="auth-modal" role="dialog" aria-labelledby="auth-title" aria-modal="true" style="display: none;">
         <div class="auth-content">
-            <span class="close-button" onclick="closeAuthModal()">&times;</span>
-            <h2>Admin Login</h2>
+            <span class="close-button" onclick="closeAuthModal()" aria-label="Close Authentication Modal">&times;</span>
+            <h2 id="auth-title">Admin Login</h2>
             <form id="login-form">
                 <label for="auth-email">Email:</label>
-                <input type="email" id="auth-email" required />
+                <input type="email" id="auth-email" required aria-required="true" />
 
                 <label for="auth-password">Password:</label>
-                <input type="password" id="auth-password" required />
+                <input type="password" id="auth-password" required aria-required="true" />
 
                 <button type="submit">Login</button>
             </form>
-            <div id="auth-status"></div>
+            <div id="auth-status" aria-live="polite"></div>
         </div>
     </div>
 
