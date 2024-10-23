@@ -1,11 +1,18 @@
-/* General Styles */
-body {
+/* Reset and Base Styles */
+* {
+    box-sizing: border-box;
     margin: 0;
+    padding: 0;
+}
+
+body {
     font-family: Arial, sans-serif;
+    line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
 }
 
+/* Header Styles */
 header {
     background-color: #4a90e2;
     color: #fff;
@@ -13,11 +20,15 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
+    background-image: url('header-background.jpg'); /* Add your background image here */
+    background-size: cover;
+    background-position: center;
 }
 
 .logo h1 {
     margin: 0;
     padding-left: 20px;
+    font-size: 1.8em;
 }
 
 nav {
@@ -42,13 +53,16 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s;
 }
 
-nav ul li a:hover {
+nav ul li a:hover,
+nav ul li a:focus {
+    color: #d1e7ff;
     text-decoration: underline;
 }
 
-/* Hamburger Menu Icon */
+/* Hamburger Menu Icon for Mobile */
 .menu-icon {
     display: none;
     flex-direction: column;
@@ -65,26 +79,43 @@ nav ul li a:hover {
 
 /* Hero Section */
 .hero {
-    background: url('your-hero-image.jpg') no-repeat center center/cover;
+    background-image: url('hero-background.jpg'); /* Add your hero background image here */
+    background-size: cover;
+    background-position: center;
     height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay for better text visibility */
 }
 
 .hero-content {
+    position: relative;
     text-align: center;
     color: #fff;
+    z-index: 1;
 }
 
 .hero h2 {
     font-size: 3em;
     margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
 }
 
 .hero p {
     font-size: 1.5em;
     margin-bottom: 30px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
 }
 
 .btn {
@@ -96,11 +127,13 @@ nav ul li a:hover {
     text-decoration: none;
     font-size: 1em;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-.btn:hover {
+.btn:hover,
+.btn:focus {
     background-color: #e6e6e6;
+    color: #357ABD;
 }
 
 /* Video Section */
@@ -112,6 +145,21 @@ nav ul li a:hover {
 .video-container {
     text-align: center;
     margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
 }
 
 .video-features {
@@ -124,15 +172,21 @@ nav ul li a:hover {
     max-width: 300px;
     margin: 10px;
     cursor: pointer;
-    transition: transform 0.3s;
+    transition: transform 0.3s, background-color 0.3s;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #f0f8ff;
 }
 
-.video-feature:hover {
+.video-feature:hover,
+.video-feature:focus {
     transform: scale(1.05);
+    background-color: #e6f2ff;
 }
 
 .video-feature h3 {
     margin-bottom: 10px;
+    color: #333;
 }
 
 .video-feature p {
@@ -160,6 +214,7 @@ nav ul li a:hover {
     overflow: hidden;
     max-width: 100%;
     height: auto;
+    margin-bottom: 40px; /* Space between models */
 }
 
 .sketchfab-embed-wrapper iframe {
@@ -177,37 +232,6 @@ nav ul li a:hover {
     margin-top: 10px;
     font-size: 0.9em;
     color: #555;
-}
-
-@media (max-width: 768px) {
-    .video-features {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .menu-icon {
-        display: flex;
-    }
-
-    nav ul {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: #4a90e2;
-    }
-
-    nav ul.active {
-        display: flex;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-        text-align: center;
-    }
-
-    .model-section h2 {
-        font-size: 1.5em;
-    }
 }
 
 /* Admin Panel Styles */
@@ -257,7 +281,8 @@ nav ul li a:hover {
     transition: background-color 0.3s;
 }
 
-.admin-panel form button:hover {
+.admin-panel form button:hover,
+.admin-panel form button:focus {
     background-color: #357ABD;
 }
 
@@ -280,7 +305,8 @@ nav ul li a:hover {
     transition: background-color 0.3s;
 }
 
-.logout-button:hover {
+.logout-button:hover,
+.logout-button:focus {
     background-color: #c0392b;
 }
 
@@ -310,6 +336,13 @@ nav ul li a:hover {
     width: 300px;
     box-sizing: border-box;
     text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.content-item:hover,
+.content-item:focus-within {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
 .content-item img,
@@ -321,6 +354,7 @@ nav ul li a:hover {
 .content-item p {
     margin-top: 10px;
     font-size: 16px;
+    color: #ddd;
 }
 
 /* Authentication Modal Styles */
@@ -388,21 +422,42 @@ nav ul li a:hover {
     transition: background-color 0.3s;
 }
 
-.auth-content form button:hover {
+.auth-content form button:hover,
+.auth-content form button:focus {
     background-color: #357ABD;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #ccc;
+    text-align: center;
+    padding: 20px 10px;
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+.social-media a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-media img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s;
+}
+
+.social-media a:hover img,
+.social-media a:focus img {
+    transform: scale(1.2);
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-    .video-features {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .menu-icon {
-        display: flex;
-    }
-
     nav ul {
         display: none;
         flex-direction: column;
@@ -419,7 +474,39 @@ nav ul li a:hover {
         text-align: center;
     }
 
+    .menu-icon {
+        display: flex;
+    }
+
     .model-section h2 {
         font-size: 1.5em;
     }
+
+    .sketchfab-embed-wrapper {
+        margin-bottom: 30px; /* Adjusted space for mobile */
+    }
+
+    .video-feature {
+        max-width: 90%;
+    }
+
+    .content-item {
+        width: 90%;
+    }
+}
+
+/* Progress Bar Styles */
+.progress-bar {
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.progress-bar-fill {
+    height: 10px;
+    background-color: #4a90e2;
+    width: 0%;
+    transition: width 0.2s;
 }
