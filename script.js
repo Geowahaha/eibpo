@@ -81,7 +81,7 @@ uploadForm.addEventListener('submit', (e) => {
 
     uploadTask.on('state_changed',
         (snapshot) => {
-            // Optional: You can implement a progress bar here
+            // Optional: Implement a progress bar here
             const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
             uploadStatus.textContent = `Upload is ${progress.toFixed(2)}% done`;
             uploadStatus.style.color = 'blue';
@@ -140,3 +140,14 @@ db.collection('uploads').orderBy('timestamp', 'desc').onSnapshot((snapshot) => {
         contentContainer.appendChild(contentItem);
     });
 });
+
+// Optional: Implement Logout Functionality
+function logoutAdmin() {
+    auth.signOut().then(() => {
+        sessionStorage.removeItem('isAdmin');
+        adminPanel.style.display = 'none';
+        // Optionally, redirect to home or another page
+    }).catch((error) => {
+        console.error('Error signing out:', error);
+    });
+}
