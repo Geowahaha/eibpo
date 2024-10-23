@@ -6,10 +6,12 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* Optional: To ensure the background covers the entire viewport */
+    min-height: 100vh;
 }
 
 /* Header Styles */
