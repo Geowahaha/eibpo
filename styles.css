@@ -207,14 +207,21 @@ nav ul li a:focus {
     color: #333;
 }
 
+.models-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
 .sketchfab-embed-wrapper {
     position: relative;
     padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
     height: 0;
     overflow: hidden;
-    max-width: 100%;
+    max-width: 30%;
     height: auto;
-    margin-bottom: 40px; /* Space between models */
 }
 
 .sketchfab-embed-wrapper iframe {
@@ -457,6 +464,12 @@ footer p {
 }
 
 /* Responsive Styles */
+@media (max-width: 1024px) {
+    .sketchfab-embed-wrapper {
+        max-width: 45%; /* Adjust to two models per row on medium screens */
+    }
+}
+
 @media (max-width: 768px) {
     nav ul {
         display: none;
@@ -483,6 +496,7 @@ footer p {
     }
 
     .sketchfab-embed-wrapper {
+        max-width: 100%; /* Full width on small screens */
         margin-bottom: 30px; /* Adjusted space for mobile */
     }
 
