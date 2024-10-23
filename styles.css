@@ -20,7 +20,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background-image: url('header-background.jpg'); /* Add your background image here */
+    background-image: url('background.jpg'); /* Add your background image here */
     background-size: cover;
     background-position: center;
 }
